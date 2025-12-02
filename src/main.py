@@ -30,6 +30,7 @@ async def main() -> None:
     async with Actor:
         # Retrieve the Actor input, and use default values if not provided.
         actor_input = await Actor.get_input() or {}
+        print(actor_input)
         start_urls = actor_input.get('start_urls', [{'url': 'https://apify.com'}])
         max_depth = actor_input.get('max_depth', 1)
 
